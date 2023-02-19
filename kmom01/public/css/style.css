@@ -33,9 +33,13 @@ main {
     border: 4px solid #CCC;
     background-color: #F2F2F2;
     color: #333;
+}
 
-    
-    
+.rainbow {
+    font-size: 2em;
+    background: linear-gradient(-90deg, red, orange, green, blue, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 footer {
