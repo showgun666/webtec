@@ -22,6 +22,8 @@
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 24px;
+    height: auto;
+    align-self: start;
 }
 
 .aside h4 {
