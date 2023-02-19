@@ -1,0 +1,10 @@
+/** byline.css */
+.byline {
+    font-size: 0.7em;
+    font-family:  sans-serif;
+    color: blanchedalmond;
+    opacity: 0.8;
+    overflow:auto;
+    background: linear-gradient(to bottom,rgb(82, 7, 65) , rgb(99, 169, 209));
+    padding-top:0%;
+}

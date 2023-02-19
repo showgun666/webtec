@@ -1,0 +1,41 @@
+.navbar {
+    background-color: #1039f0;
+    border-top: 4px solid #4F5B93;
+    text-align: left;
+    font-size: 2em;
+    float:left;
+    background-color: blueviolet;
+}
+
+/*
+ * Style links.
+ */
+.navbar a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.2em 1em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #EEE;
+    background-color: #4F5B93;
+}
+
+/*
+ * Remove bullets, margins and padding from the list.
+ */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Put the li items on a line.
+ */
+.navbar li {
+    display: inline;
+}
