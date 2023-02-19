@@ -39,7 +39,6 @@ include('../view/navbar.php');
             <p>Här prövar vi att vara lite crazy.</p>
         </div>
     </main>
-    
 
     <aside class="aside">
         <p>Nu är klockan <?= $time ?> i Sverige.</p>
