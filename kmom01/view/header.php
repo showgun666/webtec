@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title><?= $title ?> | Me-sidan</title>
     <meta name="referrer" content="unsafe-url">
-    <link rel="shortcut icon" href="img/favicon.png"/>
+    <link rel="shortcut icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
