@@ -1,6 +1,6 @@
 <footer class="byline">
     <hr>
-    <figure class="figure left">
+    <figure class="figure figure-left">
         <a href="me.php">
         <img src="img/dice.jpg" width="50" class="me" alt="Representativ bild av min personlighet">
         </a>
