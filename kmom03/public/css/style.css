@@ -8,6 +8,9 @@
 @import "two_column_layout.css";
 @import "responsive.css";
 @import "crazy.css";
+@import "play.css";
+@import "friday.css";
+@import "month.css";
 
 html {
     background-color: #9C9;
@@ -58,4 +61,3 @@ footer {
 
     padding: 1em;
 }
-

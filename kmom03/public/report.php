@@ -37,8 +37,13 @@ include('../view/navbar.php');
 
             <h2 id="kmom03">kmom03</h2>
 
-            <p>Här kommer redovisningstexten för detta kursmoment.</p>
-
+            <p>Jag råkade lösa delen om information om veckans dagar och datum med loopar på egen hand, då jag inte scrollade vidare och såg att lösningen fanns innan jag spenderade säkert en och en halv timme på att lista ut hur jag skulle få till det. Det känns ganska bra och det känns som att jag lärt mig en hel del.</p>
+            <p>Än så länge så känns PHP ganska straight forward. Det krångliga för mig är mer kombinationen av html och php, vart alla vinklar ska sitta och när man ska ha frågetecken osv. Men det blir klarare för var gång jag jobbar med det. </p>
+            <p>Det känns ganska smart och fiffigt att använda sidkontroller och vyer, men jag undrade lite under uppgiften för mig själv om jag skulle plocka ut mycket av php-koden ur sidvyn och sätta det i en kontroller istället, men istället så bakade jag bara in allt i friday och month. Det kändes okej, men beroende på hur stor en sida är och vilken kod det är så kan jag förstå att det kan vara bra att bryta ut delar och importera det istället.</p>
+            <p>Än så känns det väl ganska obekvämt, segt och struligt. Jag har fått sitta mycket med dokumentationen för date och slitit mig i håret för att få saker att funka. Knapparna för nästa och föregående månad gjorde jag först som länkar och snurrade till det ordentligt med php, vilket jag tror var ganska bra för jag lärde mig en hel del innan jag gjorde knapparna som du kan se i den färdiga sidan. Grundkonstruktionerna i övrigt är ganska bra och min IDE hjälper mig när jag inte förstår saker.</p>
+            <p>Eftersom jag ligger så helt otroligt långt efter så valde jag att inte lägga extra tid på extrauppgifterna. Friday var väldigt rakt på kändes det som. Jag klockade inte mig själv men det kändes som att jag var klar på typ 10 minuter, om man bortser från tiden jag lade på att hitta bilder, en gif och göra css till sidan.</p>
+            <p>Month-sidan tog längre tid och som jag nämnde tidigare så snurrade jag till det lite extra för mig. Jag började med att titta igenom uppgiften med kraven och försöka lista ut hur jag skulle gå tillväga för att få allt på plats på ett bra sätt. Sedan tittade jag på dokumentationen för tables och kompletterade med några väl varda sökord på google för att bygga en tabell som skulle göra det jag ville och lade till lite css för de visuals jag ville ha med mock-text i tabellen. Sedan började jag jobba med php och get för att fylla tabellen. Jag började med själva loopen och lade till variabler allteftersom jag behövde dem. Sedan när kalendern var klar så gjorde jag knapparna.</p>
+            <p>Dagens TIL är hur man kan hämta information från en användare och sedan köra php-kod för att visa olika saker på hemsidan. Det känns riktigt ballt och jag är taggad på att jobba med sessions.</p>
             <h2 id="kmom04">kmom04</h2>
 
             <p>Här kommer redovisningstexten för detta kursmoment.</p>
