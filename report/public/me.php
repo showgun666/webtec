@@ -1,7 +1,7 @@
 <?php
 include('../config/config.php');
 
-$title = 'min sida om mig';
+$title = 'Min sida om mig';
 
 include('../view/header.php');
 include('../view/navbar.php');
@@ -10,7 +10,7 @@ include('../view/navbar.php');
     <main Class="main">
 
         <article Class="article">
-            <h1>Om Mig Själv</h1>
+            <h1><?= $title ?></h1>
 
             <p class="author">Skriven av Markus Lindgren, uppdaterad <time datetime="2022-09-08">2022-09-08</time>.</p>
 

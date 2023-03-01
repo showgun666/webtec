@@ -1,7 +1,7 @@
 <?php
 include('../config/config.php');
 
-$title = 'En sida för Today I Learned';
+$title = 'En sida för Today(I Learned)';
 include('../view/header.php');
 // Set the timezone to use
 date_default_timezone_set('Europe/Stockholm');
@@ -24,7 +24,8 @@ include('../view/navbar.php');
 
 <div class="two-col-layout">
     <main Class="main">
-        <p>Dagens datum är <?= $today ?> och idag är det <?= $weekday ?>.</p>
+        <h1><?= $title ?></h1>
+        <p>Dagens datum är <?= $today ?> och idag är det <span Class="funky"><?= $weekday ?></span>.</p>
         <p>Nu är det vecka <?= $week ?>.</p>
         <p> detta är en liten sida som jag testar att bygga något eget med lite patchwork från genomgång, övning osv. 
 

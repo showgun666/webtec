@@ -19,9 +19,9 @@ $week = date('W')
 ?>
 <div class="two-col-layout">
     <main Class="main">
-
-    <p>Dagens datum är <?= $today ?> och idag är det <?= $weekday ?>.</p>
-    <p>Nu är det vecka <?= $week ?>.</p>
+        <h1><?= $title ?></h1>
+        <p>Dagens datum är <?= $today ?> och idag är det <?= $weekday ?>.</p>
+        <p>Nu är det vecka <?= $week ?>.</p>
     </main>
 
     <aside class="aside">
