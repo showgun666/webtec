@@ -1,0 +1,12 @@
+/** gallery.css */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ccc;
+}
+  
+.gallery img {
+    width: calc(33.33% - 10px);
+    margin: 5px;
+}

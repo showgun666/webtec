@@ -1,0 +1,27 @@
+/** session.css */
+
+.success {
+    background-color: green;
+    color: white;
+    font-size: 2em;
+}
+
+.success::before {
+    content: "\2713";
+    color: white;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.failure {
+    background-color: yellow;
+    color: black;
+    font-size: 2em;
+}
+
+.failure::before {
+    content: "\26A0";
+    color: black;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}

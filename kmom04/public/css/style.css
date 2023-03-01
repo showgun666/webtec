@@ -1,0 +1,66 @@
+@import "init.css";
+@import "navbar.css";
+@import "header.css";
+@import "footer.css";
+@import "main.css";
+@import "figure.css";
+@import "byline.css";
+@import "two_column_layout.css";
+@import "responsive.css";
+@import "crazy.css";
+@import "play.css";
+@import "friday.css";
+@import "month.css";
+@import "gallery.css";
+@import "session.css";
+@import "calendar.css";
+
+html {
+    background-color: #9C9;
+    border: 8px solid #696;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+
+}
+
+header {
+    background-color: rgb(160, 160, 238);
+    border: 4px solid;
+    border-color: purple;
+    font-size: 24px;
+    padding: 1em;
+    
+}
+
+body {
+    background-color: #8892BF;
+    border: 4px solid #4F5B93;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    
+}
+
+main {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0.5em;
+
+    border: 4px solid #CCC;
+    background-color: #F2F2F2;
+    color: #333;
+
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+
+    
+    
+}
+
+footer {
+
+    padding: 1em;
+}
