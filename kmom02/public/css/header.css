@@ -62,8 +62,6 @@
  .header {
     background-color: var(--medium-color);
     border-bottom: 4px solid var(--dark-color);
-    position: left;
-
     background-image: url("../img/panorama.jpg");
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
