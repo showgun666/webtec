@@ -4,15 +4,17 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width:1200px;
     margin: 0 auto;
 }
 
 .two-col-layout > .main {
     width: calc(100% / 16 * 12); /* 12/16 width */
 }
+.two-col-layout > .main > .article {
+    width: calc(100% / 16 * 12); /* 12/16 width */
+}
 
-.two-col-layout > .aside {
+.two-col-layout > .main > .aside {
     width: calc(100% / 16 * 4); /* 4/16 width */
 }
 
@@ -22,6 +24,7 @@
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 24px;
+    height: fit-content;
 }
 
 .aside h4 {

@@ -5,12 +5,20 @@
  */
  body {
     background-color: #eee;
+    display: table;
+    width: 100%;
+    height: auto;
+    table-layout: fixed;
 }
 
 .main {
     margin: 0 auto;
-    max-width: 1200px;
-    min-height: 20em;
+    min-height: 40.5em;
+    width: 60%;
+    float: left;
+    display: table-cell;
+    vertical-align: top;
+    height: 100%;
 }
 
 
@@ -21,6 +29,7 @@
     border-right: 1px solid #ccc;
     padding-left: 1em;
     padding-right: 1em;
+    float: left;
 }
 
 .article h1 {
@@ -35,3 +44,5 @@
     color: #666;
     font-style: italic;
 }
+
+

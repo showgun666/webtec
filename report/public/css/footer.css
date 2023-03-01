@@ -7,7 +7,8 @@
     background: linear-gradient(to bottom, rgb(99, 169, 209), rgb(82, 7, 65));
     color: #FFF;
     padding: 0 6em;
-    
+    float: left;
+    width: 100%;
 }
 
 html {

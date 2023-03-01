@@ -1,10 +1,15 @@
 .navbar {
     background-color: #1039f0;
-    border-top: 4px solid #4F5B93;
     text-align: left;
     font-size: 2em;
     float:left;
     background-color: blueviolet;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 18%;
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
 }
 
 /*

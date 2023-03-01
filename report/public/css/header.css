@@ -16,6 +16,7 @@
     background-color: var(--light-color);
     border-bottom: 4px solid var(--dark-color);
     position: relative;
+    margin-bottom: 1em;
 }
 
 /*
@@ -23,7 +24,6 @@
  */
 .header .logo {
     width: 150px;
-
     position: relative;
     top: 5px;
     left: 20px;
@@ -59,20 +59,14 @@
 /*
  * Add background image.
  */
- .header {
+.header {
     background-color: var(--medium-color);
     border-bottom: 4px solid var(--dark-color);
-    position: left;
-
     background-image: url("../img/panorama.jpg");
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center;
     background-size: cover;
-    
-    
-    
-      
 }
 
 /*
