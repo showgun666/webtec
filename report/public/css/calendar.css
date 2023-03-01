@@ -1,0 +1,44 @@
+/** calendar.css */
+
+.date-number {
+    width: 14.28%;
+    text-align: left;
+    font-size: 2em;
+}
+
+.nameday {
+    text-align: left;
+    font-size: 0.5em;
+    vertical-align: bottom;
+    word-wrap: normal;
+}
+
+.date-content {
+    padding-top: 0%;
+    vertical-align: bottom;
+}
+
+.calendar-day {
+    vertical-align: bottom;
+}
+
+.outside-month {
+    color: grey;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table-row {
+    vertical-align: top;
+}
+
+.week-number {
+    vertical-align: top;
+}
+
+.photocal-photo {
+    width: 100%;
+    height: 40em;
+}
