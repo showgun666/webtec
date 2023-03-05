@@ -1,0 +1,48 @@
+/** main.css */
+
+/*
+ * Set colors and size.
+ */
+ body {
+    background-color: #eee;
+    display: table;
+    width: 100%;
+    height: auto;
+    table-layout: fixed;
+}
+
+.main {
+    margin: 0 auto;
+    min-height: 40.5em;
+    width: 60%;
+    float: left;
+    display: table-cell;
+    vertical-align: top;
+    height: 100%;
+}
+
+
+.article {
+    overflow: auto;
+    background: #fff;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding-left: 1em;
+    padding-right: 1em;
+    float: left;
+}
+
+.article h1 {
+    font-size: 2em;
+    border-bottom: 4px double #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.article .author {
+    margin-top: -1em;
+    font-size: 0.8em;
+    color: #666;
+    font-style: italic;
+}
+
+
