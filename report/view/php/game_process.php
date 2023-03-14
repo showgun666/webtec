@@ -16,6 +16,7 @@ if ($isCorrect) {
     $_SESSION['incorrectCount']++;
 }
 $_SESSION['guessedName'] = $guessedName;
+$_SESSION['pageTwoName'] = $_SESSION['randomName'];
 
 // sedirecta till resultatssidan
 header('Location: ../../public/game_result.php');
