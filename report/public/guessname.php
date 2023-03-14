@@ -11,7 +11,7 @@ include('../view/navbar.php');
 // skapa array med key namn, value betydelse
 $namnArray = getNameExplanation();
 
-// skapa correctCount och incorrectCount i sessionen om de inte f
+// skapa correctCount och incorrectCount i sessionen om de inte finns
 if (!isset($_SESSION['correctCount'])) {
     $_SESSION['correctCount'] = 0;
 }
@@ -24,15 +24,15 @@ if (!isset($_SESSION['incorrectCount'])) {
 $names = array_keys(getNameExplanation());
 $randomIndex = array_rand($names);
 $_SESSION['randomName'] = $names[$randomIndex];
-
 // skriv ut betydelsen av det slumpade namnet
 $explanations = getNameExplanation();
 $randomName = $_SESSION['randomName'];
 $randomExplanation = $explanations[$randomName];
+$_SESSION['pageOneName'] = $_SESSION['randomName'];
 ?>
 <main class="main">
     <h1>Hur lyder namnet som har denna betydelse?</h1>
-    <p>Betydelse: <?php echo $randomExplanation; ?></p>
+    <p>Betydelse: <?= $randomExplanation ?></p>
     <form action="../view/php/game_process.php" method="post">
         <label for="name">Namn:</label>
         <input type="text" id="name" name="name" required>
@@ -40,3 +40,4 @@ $randomExplanation = $explanations[$randomName];
     </form>
 </main>
 <?php include('../view/footer.php') ?>
+<pre><?= var_dump($_SESSION) ?></pre>

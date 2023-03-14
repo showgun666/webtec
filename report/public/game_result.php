@@ -11,7 +11,7 @@ $correctName = $_SESSION['randomName'];
 $result = $_SESSION['result'];
 $correctCount = $_SESSION['correctCount'] ?? 0;
 $incorrectCount = $_SESSION['incorrectCount'] ?? 0;
-
+$_SESSION['pageThreeName'] = $_SESSION['randomName'];
 // slumpa fram ett nytt namn och rensa sessionen om användaren går tillbaka till indexsidan
 if (isset($_POST['playAgain'])) {
     header('Location: guessname.php');
@@ -29,6 +29,6 @@ if (isset($_POST['playAgain'])) {
         <button type="submit" name="playAgain">Spela igen</button>
     </form>
 </main>
-
+<pre><?= var_dump($_SESSION) ?></pre>
 
 <?php include('../view/footer.php') ?>
