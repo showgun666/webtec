@@ -96,7 +96,11 @@ include('../view/navbar.php');
 
             <h2 id="kmom06">kmom06</h2>
 
-            <p>Här kommer redovisningstexten för detta kursmoment.</p>
+            <p>Det kändes som en ganska naturlig fortsättning av tidigare uppgifter med SQL och databas att jobba med CRUD. Det blev också mycket repetition med att arbeta mot databasen också så det blev som en bra drillövning i det hela. Jag känner mig bekväm att arbeta med sql och det känns som att jag har tillräckligt med koll nu för att ha en god bas att stå på för att gå vidare.</p>
+            <p>När det kom till själva inloggningsdelen så märkte jag väldigt tidigt att det är viktigt att hålla koll på vad man har i session och vad varje sida förväntar sig finns där. Det var väldigt kul och gav goda insikter i hur system jag använt nästan hela mitt liv fungerat bakom user interface vilket gav mig goda ramar för att relatera till och rationalisera mina nya färdigheter.</p>
+            <p>Jag är väl rimligt nöjd med min kod. Känns som att jag nästan bara copy-pasteat från tidigare uppgifter med vissa små förändringar. Detta kmom kändes väldigt kort också i själva utförandet, men det tog längre tid att läsa och förstå vad det är jag höll på med. Det kanske har att göra med att jag är mer van vid att arbeta i html och php nu så att det går undan för att jag kan visualisera vad jag vill göra och sedan utföra det utan att behöva göra fel 100 gånger och leta efter lösningar.</p>
+            <p>TIL att om jag är inloggad i session som en row som inte existerar i en databas och har kod som försöker koppla upp sig mot db där den tror att den row finns så blir det konstiga resultat. Viktigt att ha koll på vad man gör och vart/när i koden, samt så blir det ytterligare en anledning till att testa koden ordentligt.</p>
+            <p>Sammanfattningsvis så känns det som att jag har koll på det vi gjort i kmom06, det gick undan och kändes bra med allt, som att jag behärskade det, men samtidigt så kändes det relativt kort och som att det hade kunnat fyllas ut med mer, men jag vet inte vad.</p>
 
             <h2 id="kmom07">kmom07</h2>
 
