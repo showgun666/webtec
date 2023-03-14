@@ -45,6 +45,21 @@ function getFlashMessage(): string
 }
 
 /**
+ * Set the flash message according to type.
+ *
+ * @return void
+ */
+function setFlashMessage(string $type, string $message): void
+{
+    $flashMessage = <<<EOD
+    <div class="$type">
+        <p>$message</p>
+    </div>
+    EOD;
+    $_SESSION["flash-message"] = $flashMessage;
+}
+
+/**
  * Exception handler to print out a HTML message with details on the exception,
  * useful to deal with uncaught exceptions.
  *
