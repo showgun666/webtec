@@ -22,6 +22,10 @@
     padding: 0.2em 1em;
     color: #FFFFFF;
     text-decoration: none;
+    border: 1px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .navbar a:hover {
@@ -43,4 +47,18 @@
  */
 .navbar li {
     display: inline;
+}
+
+.navbar p {
+    padding-left: 1em;
+}
+
+.navbar-user-left {
+    float: left;
+    max-width: 50%;
+}
+
+.navbar-user-right {
+    float: right;
+    max-width: 50%;
 }
