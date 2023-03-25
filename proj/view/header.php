@@ -30,7 +30,10 @@
 
                 <ul class="nav nav-right">
                     <li>
-                        <a href="LÄNK">LÄNKBESKRIVNINGhöger</a>
+                        <form class="nav-search" action="search.php" method="POST">
+                            <input type="text" name="search" placeholder="Search...">
+                            <button type="submit">Sök</button>
+                        </form>
                     </li>
                 </ul>
             </nav>
@@ -39,3 +42,4 @@
             <h3 class="text-center">Begravningsmuseum Online</h3>
             <h4 class="text-center">Upptäck svenska begravningsseder och bruk under 1800-tal och tidigt 1900-tal med oss.</h4>
         </div>
+        
