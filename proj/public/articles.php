@@ -37,7 +37,7 @@ $res = $stmt->fetchAll();
         // Fyll ut sidan med previews
         $pageContent = articleToContentFullPreview($res);
         echo $pageContent;
-        ?>
+    ?>
 </div>
 
 <?php
