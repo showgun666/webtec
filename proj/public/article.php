@@ -1,7 +1,7 @@
 <?php
 include('../config/config.php');
 
-$title = 'hemsida';
+$title = 'artikel';
 include('../view/header.php');
 include('../view/side.php');
 
@@ -23,11 +23,32 @@ if (isset($articleid)) {
         EOD;
     // hämta resultatarray
     $res = prepareExecuteFetchOne($sql, $db, $articleid);
+
+    // Om vi har en träff så presenterar vi innehållet
     if (isset($res["id"])) {
         $articleTitle = $res["title"];
         $articleContent = $res["content"];
         $articleAuthor = $res["author"];
         $articlePubdate = $res["pubdate"];
+
+        // Hämta också alla objekt som hör till artikeln
+        $articleTitleSplit = preg_split("/[\s,]+/", $articleTitle);
+        // Tar bort två bokstäver för grammatiska ändelser
+        $objectCategoryShortened = substr($articleTitleSplit[0], 0, -2);
+        $objectCategory = '%' . $objectCategoryShortened . '%';
+        // Förbered SQL fråga
+        $sql2 = <<<EOD
+        SELECT
+            id,
+            title,
+            image
+        FROM Object
+        WHERE
+            category LIKE ?
+        ;
+        EOD;
+        // hämta resultatarray
+        $res2 = prepareExecuteFetchAll($sql2, $db, $objectCategory);
         echo <<<EOD
         <div class="content">
             <div class="content-box content-left text-center">
@@ -38,8 +59,24 @@ if (isset($articleid)) {
                     <p class="text-small text-right"> $articleAuthor $articlePubdate </p>
                 </div>
             </div>
-        </div>
         EOD;
+
+        // Om det finns några objekt kopplade till artikeln:
+        if (isset($res2[0])) {
+            echo "<div class='content-box object-gallery'>";
+            foreach ($res2 as $object) {
+                $objectid = $object["id"];
+                $objectTitle = $object["title"];
+                $objectImg = $object["image"];
+                echo '<a href="object.php?objectid=' . $objectid . '" class="clickable">';
+                echo '<div class="object-gallery-item">';
+                echo '<img src="img/550x550/' . $objectImg . '" alt="' . $objectTitle . ' image">';
+                echo "<div class='object-gallery-title'>" . $objectTitle . "</div>";
+                echo '</a></div>';
+            }
+            echo "</div>";
+        }
+        echo "</div>";
     } else {
         echo <<<EOD
         <div class="content">
