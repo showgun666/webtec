@@ -1,4 +1,5 @@
 <?php
+
 // hämta senaste artikeln från databasen baserat på pubdate och visa i side
 // Koppla mot databas
 $db = connectToDatabase(createDSN(getFilename("bmo.sqlite")));
@@ -24,8 +25,9 @@ $articlePubdate = $res["pubdate"];
 <main>
     <div class="side-bar content-left">
         <h3> Nyheter </h3>
-        <a class="block-link" href="article.php?articleid=<?= $objectid=$articleid ?>">
+        <a class="block-link" href="article.php?articleid=<?= $articleid ?>">
             <div class="content-box">
+                <p> Senaste artikeln</p>
                 <p class="text-small"><?= $articlePubdate ?>
                 <h3><?= $articleTitle ?></h3>
                 <p><?= $articleContent ?></p>

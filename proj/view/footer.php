@@ -9,7 +9,7 @@
             <a href="doc.php">Dokumentation</a>
         </div>
         <div class="column text-center">
-            <a href="https://github.com/showgun666/webtec/tree/main/proj>Github</a>
+            <a href="https://github.com/showgun666/webtec/tree/main/proj"> Github </a>
         </div>
     </div>
     <div class="text-center text-small">©2022 Markus von Wowern</div>
