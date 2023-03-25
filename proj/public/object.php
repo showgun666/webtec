@@ -1,7 +1,7 @@
 <?php
 include('../config/config.php');
 
-$title = 'hemsida';
+$title = 'objekt';
 include('../view/header.php');
 include('../view/side.php');
 
@@ -13,30 +13,87 @@ if (isset($objectid)) {
     // Koppla mot databas
     $db = connectToDatabase(createDSN(getFilename("bmo.sqlite")));
     // Förbered SQL fråga
-    $sql = <<<EOD
+    $sql1 = <<<EOD
         SELECT
-            *
+            id,
+            title,
+            owner,
+            image,
+            category,
+            text
         FROM Object
         WHERE
             id = ?
         ;
         EOD;
     // hämta resultatarray
-    $res = prepareExecuteFetchOne($sql, $db, $objectid);
+    $res = prepareExecuteFetchOne($sql1, $db, $objectid);
     if (isset($res["id"])) {
-        $objectid= $res["id"];
+        $objectid = $res["id"];
         $objectTitle = $res["title"];
         $objectText = $res["text"];
         $objectOwner = $res["owner"];
         $objectImage = $res["image"];
+        $objectCategory = $res["category"] . "%";
+
+        // Hämta länk till artikeln som motsvarar objektet
+        // Förbered SQL fråga
+        $sql2 = <<<EOD
+        SELECT
+            id,
+            author
+        FROM Article
+        WHERE
+            title LIKE ?
+        ;
+        EOD;
+        // Prepare the first SQL statement so it can be executed
+        $stmt = $db->prepare($sql2);
+        // Execute the first SQL statement towards the database
+        $stmt->execute([$objectCategory]);
+        $articleResult = $stmt->fetch();
+        $articleLink = "";
+        if (isset($articleResult['id'])) {
+            $articleid  = $articleResult['id'];
+            $articleAuthor = $articleResult['author'];
+            $articleLink = '<p> Läs <a href="article.php?articleid=' . $articleid . '">artikeln ' . $articleAuthor . '</a> för att lära dig mer</p>';
+        }
+
+        // Förbered SQL fråga för att räkna alla objekt
+        $sql3 = <<<EOD
+        SELECT
+            COUNT(id) as objectcount
+        FROM Object
+        ;
+        EOD;
+        // förebered fråga
+        $stmt = $db->prepare($sql3);
+
+        // Execute the first SQL statement towards the database
+        $stmt->execute();
+        $res3 = $stmt->fetchAll();
+        $objectCount = $res3[0]["objectcount"];
+
+        // öka next id med 1 och sänk previous med 1
+        $nextObject = $objectid + 1;
+        $previousObject = $objectid - 1;
+        if ($previousObject < 1) {
+            $previousObject = 1;
+        }
+        if ($nextObject > $objectCount) {
+            $nextObject = $objectCount;
+        }
+
         echo <<<EOD
             <div class="content">
                 <div class="content-box content-left text-center">
+                    <a class="content-left text-left" href="object.php?objectid=$previousObject">Föregående objekt</a>
+                    <a class="content-right text-right" href="object.php?objectid=$nextObject">Nästa objekt</a>
                     <h3 class="content-title"> $objectTitle </h3>
                     <img class="content-fit-img" src="img/full-size/$objectImage" alt="Bild för <?= $objectTitle ?>">
                     <p>$objectText</p>
                     <div>
-                        <a href="objects.php" class="content-left">Klicka här för att gå till objektgalleriet.</a>
+                        $articleLink
                         <p class="text-small text-right"> Ägare: $objectOwner </p>
                     </div>
                 </div>
