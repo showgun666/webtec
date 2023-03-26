@@ -30,7 +30,7 @@ echo <<<EOD
 <div class="content">
     <div class="content-box content-left text-center">
         <h3 class="content-title"> $articleTitle </h3>
-        <p>$articleContent</p>
+        $articleContent
         <p class="text-small text-right"> $articleAuthor  $articlePubdate </p>
     </div>
 </div>

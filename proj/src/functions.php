@@ -109,7 +109,7 @@ function articleToContentFullPreview(array $dbresultset)
 
         // Append string to return string
         $formattedString = $formattedString . <<<EOD
-        <a class="block-link" href=article.php?articleid=$id>
+        <a class="block-link" href="article.php?articleid=$id">
             <div class="content-box $position">
                 <h3>$title</h3>
                 <p> $content </p>
@@ -149,9 +149,9 @@ function objectToContentFullPreview(array $dbresultset)
         }
 
         $formattedString = $formattedString . <<<EOD
-        <a class="block-link" href=object.php?objectid=$id>
+        <a class="block-link" href="object.php?objectid=$id">
             <div class="content-box $position">
-                <img class="$positionImage" src="img/250/$img" alt="Bild för $title">
+                <img class="$positionImage" src="img/250x250/$img" alt="Bild för $title">
                 <h3>$title</h3>
                 <p> $content </p>
             </div>

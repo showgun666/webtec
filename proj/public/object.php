@@ -75,44 +75,44 @@ if (isset($objectid)) {
         $objectCount = $res3[0]["objectcount"];
 
         // öka next id med 1 och sänk previous med 1
-        $nextObject = $objectid + 1;
-        $previousObject = $objectid - 1;
-        if ($previousObject < 1) {
-            $previousObject = 1;
+        $previousObject = $objectid + 1;
+        $nextObject = $objectid - 1;
+        if ($nextObject < 1) {
+            $nextObject = 1;
         }
-        if ($nextObject > $objectCount) {
-            $nextObject = $objectCount;
+        if ($previousObject > $objectCount) {
+            $previousObject = $objectCount;
         }
 
-        echo <<<EOD
-            <div class="content">
-                <div class="content-box content-left text-center">
-                    <a class="content-left text-left" href="object.php?objectid=$previousObject">Föregående objekt</a>
-                    <a class="content-right text-right" href="object.php?objectid=$nextObject">Nästa objekt</a>
-                    <h3 class="content-title"> $objectTitle </h3>
-                    <img class="content-fit-img" src="img/full-size/$objectImage" alt="Bild för <?= $objectTitle ?>">
-                    <p>$objectText</p>
-                    <div>
-                        $articleLink
-                        <p class="text-small text-right"> Ägare: $objectOwner </p>
-                    </div>
+        $contentString = <<<EOD
+            <div class="content-box content-left text-center">
+                <a class="content-left text-left" href="object.php?objectid=$previousObject">Föregående objekt</a>
+                <a class="content-right text-right" href="object.php?objectid=$nextObject">Nästa objekt</a>
+                <h3 class="content-title"> $objectTitle </h3>
+                <a href="img/full-size/$objectImage">
+                    <img class="content-fit-img" src="img/550x550/$objectImage" alt="Bild för $objectTitle">
+                </a>
+                <p>$objectText</p>
+                <div>
+                    $articleLink
+                    <p class="text-small text-right"> Ägare: $objectOwner </p>
                 </div>
             </div>
         EOD;
     } else {
-        echo <<<EOD
-            <div class="content">
-                <div class="content-box content-left text-center">
-                    <h3 class="content-title"> Hoppsan, det här objektet verkar inte finnas.</h3>
-                    <a href="objects.php">Klicka här för att gå till objektgalleriet.</a>
-                </div>
+        $contentString = <<<EOD
+            <div class="content-box content-left text-center">
+                <h3 class="content-title"> Hoppsan, det här objektet verkar inte finnas.</h3>
+                <a href="objects.php">Klicka här för att gå till objektgalleriet.</a>
             </div>
         EOD;
     }
 }
 ?>
 
-
+<div class="content">
+    <?= $contentString ?>
+</div>
 
 <?php
 include('../view/footer.php');

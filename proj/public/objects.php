@@ -14,6 +14,8 @@ $sql = <<<EOD
     SELECT
         *
     FROM Object
+    ORDER BY
+        id DESC
     ;
     EOD;
 

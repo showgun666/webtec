@@ -7,8 +7,12 @@ $db = connectToDatabase(createDSN(getFilename("bmo.sqlite")));
 $sql = <<<EOD
     SELECT
         *
-    FROM article
-    ORDER BY pubdate DESC
+    FROM
+        article
+    WHERE
+        category = 'article'
+    ORDER BY
+        pubdate DESC
     LIMIT 1
     ;
     EOD;
@@ -26,7 +30,7 @@ $articlePubdate = $res["pubdate"];
     <div class="side-bar content-left">
         <h3> Nyheter </h3>
         <a class="block-link" href="article.php?articleid=<?= $articleid ?>">
-            <div class="content-box">
+            <div class="content-box text-wrap">
                 <p> Senaste artikeln</p>
                 <p class="text-small"><?= $articlePubdate ?>
                 <h3><?= $articleTitle ?></h3>

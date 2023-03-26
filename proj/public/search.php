@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' and $_POST['search'] != "") {
             *
         FROM Article
         WHERE
-            title OR category OR author
+            title
             LIKE ?
         ;
         EOD;
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' and $_POST['search'] != "") {
                 <div class="content-box $positionText $positionContent">
                     <h3 class="content-title $positionText"> Objekt $resultTitle </h3>
                     <br>
-                    <img class="$positionContent" src="img/80/$resultImg" alt="Bild för $resultTitle">
+                    <img class="$positionContent" src="img/80x80/$resultImg" alt="Bild för $resultTitle">
                     <p>$contentPreview</p>
                 </div>
             </a>

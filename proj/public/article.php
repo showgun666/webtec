@@ -49,47 +49,52 @@ if (isset($articleid)) {
         EOD;
         // hämta resultatarray
         $res2 = prepareExecuteFetchAll($sql2, $db, $objectCategory);
-        echo <<<EOD
-        <div class="content">
-            <div class="content-box content-left text-center">
-                <h3 class="content-title"> $articleTitle </h3>
-                <p>$articleContent</p>
-                <div>
-                    <a href="articles.php" class="content-left">Klicka här för att gå till artiklarna.</a>
-                    <p class="text-small text-right"> $articleAuthor $articlePubdate </p>
-                </div>
+        $articleString = <<<EOD
+            <h3 class="content-title"> $articleTitle </h3>
+            $articleContent
+            <div>
+                <a href="articles.php" class="content-left">Klicka här för att gå till artiklarna.</a>
+                <p class="text-small text-right"> $articleAuthor $articlePubdate </p>
             </div>
         EOD;
 
+        $galleryString = "";
         // Om det finns några objekt kopplade till artikeln:
         if (isset($res2[0])) {
-            echo "<div class='content-box object-gallery'>";
+            $galleryString = '<div class="content-box content-left text-center"><div class="object-gallery">';
             foreach ($res2 as $object) {
                 $objectid = $object["id"];
                 $objectTitle = $object["title"];
                 $objectImg = $object["image"];
-                echo '<a href="object.php?objectid=' . $objectid . '" class="clickable">';
-                echo '<div class="object-gallery-item">';
-                echo '<img src="img/550x550/' . $objectImg . '" alt="' . $objectTitle . ' image">';
-                echo "<div class='object-gallery-title'>" . $objectTitle . "</div>";
-                echo '</a></div>';
+                $galleryItemString = <<<EOD
+                    <a href="object.php?objectid=$objectid" class="clickable object-gallery-item">
+                        <img src="img/250x250/$objectImg" alt="$objectTitle image">
+                        <div class="object-gallery-title">$objectTitle</div>
+                    </a>
+                    EOD;
+                $galleryString = $galleryString . $galleryItemString;
             }
-            echo "</div>";
+            // stäng divarna
+            $galleryString = $galleryString . "</div></div>";
         }
-        echo "</div>";
     } else {
-        echo <<<EOD
+        $articleString = <<<EOD
         <div class="content">
-            <div class="content-box content-left text-center">
+            <div class="content-box content-left text-center text-wrap">
                 <h3 class="content-title"> Hoppsan, den här artikeln verkar inte finnas! </h3>
                 <a href="articles.php">Klicka här för att gå till artiklarna.</a>
             </div>
-        </div>
         EOD;
     }
 }
 ?>
 
+<div class="content">
+    <div class="content-box content-left text-center">
+        <?= $articleString ?>
+    </div>
+    <?= $galleryString ?>
+</div>
 
 <?php
 include('../view/footer.php');

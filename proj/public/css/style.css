@@ -8,8 +8,8 @@ body {
   position: relative;
   color: #4d4c43;
   background-color: #fefdf5;
-  padding-top: 50px;
-  font-size: 14px;
+  padding-top: 4em;
+  font-size: 0.9em;
   line-height: 1.42857143;
   margin: 0;
   display: block;
@@ -75,7 +75,7 @@ body {
 header {
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  padding: 0.8em;
 }
 
 nav ul {
@@ -91,7 +91,7 @@ nav li {
 nav li a {
   display: block;
   color: #fff;
-  padding: 10px;
+  padding: 0.7em;
   text-decoration: none;
 }
 
@@ -106,7 +106,6 @@ nav:after {
 }
 
 .banner {
-  background-color: ecd88a;
   color:#333;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -115,8 +114,8 @@ nav:after {
 }
 
 .footer-logo {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 1em;
+  padding-bottom: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,10 +126,10 @@ footer {
   padding-right: 15%;
   width: 70%;
   background-color: #AFE3BB;
-  margin-top: 800px;
+  margin-top: 50em;
   display: table;
   content: " ";
-  padding-bottom: 10px;
+  padding-bottom: 0.8em;
 }
 
 .column {
@@ -154,6 +153,11 @@ footer {
   font-size: smaller;
 }
 
+.text-wrap {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
 main {
   padding-left: 20%;
   padding-right: 20%;
@@ -173,21 +177,25 @@ main {
   width: 75%;
 }
 
+.content-title {
+  width: 100%;
+}
+
 .content-box {
   box-sizing: border-box;
   width: 90%;
   border: 2px solid  #64B1C8;
   border-radius: 5px;
   position: relative;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 1em;
+  padding-bottom: 1em;
   padding-left: 5%;
   padding-right: 5%;
-  margin-bottom: 15px;
+  margin-bottom: 1em;
 }
 
 .content-fit-img {
-  max-width: inherit;
+  max-width: 100%;
   max-height: inherit;
   height: inherit;
   width: inherit;
@@ -218,7 +226,7 @@ main {
 }
 
 .object-gallery-item {
-  flex-basis: calc(33.33% - 20px);
+  flex-basis: calc(33.33% - 2em);
   margin: 10px;
   text-align: center;
 }
@@ -229,11 +237,15 @@ main {
 
 .object-gallery-title {
   margin-top: 2px;
-  font-size: 14px;
+  font-size: 1em;
 }
 .clickable {
   box-sizing: border-box;
   text-decoration: none;
   text-decoration: underline;
   color: #4d4c43;
+}
+
+.button-50 {
+  width: 50%;
 }

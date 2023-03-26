@@ -26,6 +26,9 @@
                     <li>
                         <a href="objects.php">Objekt</a>
                     </li>
+                    <li>
+                        <a href="gallery.php">Galleri</a>
+                    </li>
                 </ul>
 
                 <ul class="nav nav-right">
